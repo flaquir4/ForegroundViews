@@ -41,12 +41,13 @@ public class ForegroundButton extends AppCompatButton {
     }
 
     public ForegroundButton(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             mForegroundDelegate = new ForegroundDelegate(this);
             mForegroundDelegate.init(context, attrs, defStyle, 0);
         }
+        super(context, attrs, defStyle);
+
+
     }
 
     @Override
